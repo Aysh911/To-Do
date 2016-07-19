@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>To Do List</title>
+  <link rel="icon" href="favicon.png" type="image/png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+/* Include the padding and border in an element's total width and height */
+
+* {
+  box-sizing: border-box;
+}
+
+
+/*Menu icon*/
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #fff;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+
+/*Navigation Bar*/
+
+.container {
+  background: #333333;
+  border-bottom: 1px solid #fff;
+  padding: 0px;
+  margin: 0px;
+  overflow-x: auto;
+}
+
+
+/*Change link appearance*/
+
+a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+  padding: 5px 6px;
+  display: inline-block;
+}
+
+
+/*Table for the navigation menu items*/
+
+table {
+  width: 36%;
+  padding: 0px 0px 0px 0px;
+  margin: 0;
+  border-collapse: collapse;
+}
+
+td {
+  border-right: 1px solid #fff;
+  padding: 10px 0px 10px 0px;
+  margin: 0;
+  text-align: center;
+  vertical-align: center;
+}
+
+td:first-child {
+  border-left: none;
+  border-right: none;
+  padding: 10px;
+}
+
+td:first-child:hover {
+  background: none;
+}
+
+td:last-child {
+  border-right: 1px solid #fff;
+}
+
+button {
+  float: right;
+}
+
+
+/*Change background on hover*/
+
+td:hover {
+  background-color: #000;
+}
+
+
+/*Change active link color*/
+
+a:focus,
+.active {
+  background-color: #F16334;
+}
+
+/*Style H1 an p*/
+
+h1 {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #fff;
+  font-family: 'Roboto', sans-serif, helvetica;
+  margin: 0;
+  padding: 8px 10px 8px 8px;
+}
+
+p {
+  font-size: 1rem;
+  color: #fff;
+  font-family: 'Roboto', sans-serif, helvetica;
+  margin: 0;
+  padding: 8px 10px 8px 8px;
+}
+
+/* Style the header */
+
+.header {
+  background-color: #F16334;
+  border-color: #e98300;
+  padding: 20px 40px;
+  color: white;
+  text-align: center;
+}
+
+
+/* Clear floats after the header */
+
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Full-width input fields */
+.login-input[type=text], .login-input[type=password] {
+    width: 100%;
+    padding: 12px 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #f16334;
+    border-radius: 3px 3px 3px 3px;
+    box-sizing: border-box;
+   font-family:'Roboto', sans serif, helvetica;
+  font-size:1rem;
+  font-weight:700;
+}
+
+.form-text{
+  font-family:'Roboto', sans serif, helvetica;
+  font-size:1rem;
+  font-weight:700;
+ }
+.psw {
+float: both;
+display:block;
+padding-top: 10px;
+font-family:'Roboto', sans serif, helvetica;
+color:blue;
+font-size:0.8rem;
+font-weight:300;
+}
+
+/* Set a style for login button */
+.loginbtn {
+    background-color: #f16334;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 5px 5px 5px 5px;
+    cursor: pointer;
+    width: 20%;
+   float:center;
+   font-size:1rem;
+   font-weight:700;
+  font-family:'Roboto', sans serif, helvetica;
+  position:absolute;
+display:inline;
+  }
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: 20%;
+    background-color: #f16334;
+    color:white;
+  padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+  float:center;
+  border-radius: 5px 5px 5px 5px;
+  font-size:1rem;
+   font-weight:700;
+  font-family:'Roboto', sans serif, helvetica;
+  position:relative;
+display:inline;
+}
+</style>
+</head>
+
+<body>
+  <div class="container">
+    <table>
+      <tr>
+        
+        <td>
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </td>
+        <td><a href="todolist.html">To Do List</a></td>
+        <td><a href="pricing.html">Pricing</a></td>
+        <td><a href="about.html">About Us</a></td>
+        </tr>
+    </table>
+  </div>
+
+   <form action="home.html" method="post">
+     
+      <div class="container1">
+        <div id="myDIV" class="header">
+          <h1>Login To Your Account</h1>
+        </div><br>
+        <label class="form-text"><b>Username</b></label>
+        <input class="login-input" type="text" placeholder="Enter Username" name="uname" required/>
+        <br>
+        <label class="form-text"><b>Password</b></label>
+        <input class="login-input" type="password" placeholder="Enter Password" name="psw" required/>
+        
+   <br>  <em><a href="forgot.html" class="psw">Forgot password?</a></em><br>
+      <button class="loginbtn" type="submit" value="Log in">Login</button>
+        <button type="submit" class="cancelbtn" onclick="window.location.href='create.html'">Create New Account</a></button>
+      </div>
+    </form>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
